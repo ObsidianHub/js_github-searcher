@@ -58,4 +58,17 @@ class UI {
 
         document.getElementById('repos').innerHTML = output;
     }
+
+    // Display alert message
+    showAlert(message = '', className = 'alert alert-info') {
+        // Clear alert
+        this.clearAlert();
+        // Create template
+        const alert = `<div class="${className}">${message}</div>`;
+
+        this.search_container.insertAdjacentHTML('afterbegin', alert);
+
+        // Hide alert after 2s
+        // setTimeout(() => this.clearAlert(), 2000);
+    }
 }
