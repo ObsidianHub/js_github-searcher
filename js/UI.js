@@ -71,4 +71,27 @@ class UI {
         // Hide alert after 2s
         // setTimeout(() => this.clearAlert(), 2000);
     }
+
+    // Clear alert
+    clearAlert() {
+        const currentAlert = document.querySelector('.alert');
+
+        if (currentAlert) {
+            currentAlert.remove();
+        }
+    }
+
+    clearProfile() {
+        this.profile.innerHTML = '';
+    }
+
+    showLoader() {
+        this.loader.style.display = 'block';
+    }
+
+    hideLoader() {
+        setTimeout(() => {
+            this.loader.style.display = 'none';
+        }, 500);
+    }
 }
