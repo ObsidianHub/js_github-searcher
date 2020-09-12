@@ -98,4 +98,18 @@ class UI {
       currentAlert.remove();
     }
   }
+
+  clearProfile() {
+    this.profile.innerHTML = "";
+  }
+
+  showLoader() {
+    this.loader.style.display = "block";
+  }
+
+  hideLoader() {
+    setTimeout(() => {
+      this.loader.style.display = "none";
+    }, 500);
+  }
 }
