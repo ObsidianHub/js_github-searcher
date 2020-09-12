@@ -76,4 +76,13 @@ class UI {
 
     document.getElementById("repos").innerHTML = output;
   }
+
+  // Clear alert
+  clearAlert() {
+    const currentAlert = document.querySelector(".alert");
+
+    if (currentAlert) {
+      currentAlert.remove();
+    }
+  }
 }
